@@ -1,0 +1,13 @@
+.css-input {
+    padding: var(--spacing-80);
+    font-size: var(--text-size-200);
+    border-width: 1px;
+    border-color: var(--color-rose-quartz);
+    background-color:transparent;
+    color:var(--color-rose-quartz);
+    border-style: solid;
+    border-radius: 8px;
+}
+.css-input:focus {
+    outline:none;
+}
