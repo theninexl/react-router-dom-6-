@@ -6,10 +6,6 @@ function useLocalStorage(itemName, initialValue){
     const [loading,setLoading] = React.useState(true);
     const [error,setError] = React.useState(false);
 
-    console.log('item: '+item);
-    console.log('loading: '+loading);
-    console.log('error: '+error)
-
     React.useEffect(()=> {
       setTimeout(()=>{
         try {
@@ -48,3 +44,16 @@ function useLocalStorage(itemName, initialValue){
   }
 
 export { useLocalStorage }
+
+
+// localStorage.removeItem('simpleTodosList_V1');
+
+// const defaultTodos = [
+//   { text: 'Cortar cebolla', completed: true },
+//   { text: 'Llorar con la Llorona', completed: false },
+//   { text: 'Whatever', completed: false },
+//   { text: 'Whatever lkasdj f ñlkasdf ñkljasdf lñjkadsf lkfd', completed: false },
+//   { text: 'Hacer curso de introduccion a React JS asdjfañsklfañ  jkajdsñlf kjñasdf kjasdf', completed: true },
+// ];
+
+// localStorage.setItem('simpleTodosList_V1', JSON.stringify(defaultTodos));
