@@ -17,13 +17,34 @@ import "./App.css";
 
 
 function App() { 
-  const [todos, saveTodos] = useLocalStorage('simpleTodosList_V1',[]);
+  const {
+    item: todos, 
+    saveItem: saveTodos,
+    loading,
+    error,
+  } = useLocalStorage('simpleTodosList_V1',[]);
 
   const [searchValue, setSearchValue] = React.useState('');
   // console.log('los usuarios buscan: '+searchValue);
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
+
+  // console.log('Log 1');
+
+  // // React.useEffect(()=> {
+  // //     console.log('Log 2');
+  // // });
+
+  // //   React.useEffect(()=> {
+  // //     console.log('Looog 2');
+  // // }, []);
+
+  //   React.useEffect(()=> {
+  //     console.log('L0000g 2');
+  // }, [totalTodos]);
+
+  // console.log('Log 3');
 
 
   const searchedTodos = todos.filter((todo)=>{
@@ -32,8 +53,9 @@ function App() {
     return todoText.includes(searchText);
   })
 
+  console.log(searchedTodos.length);
+
   const completeStandaloneTodo = (text) => {
-    console.log('marca done');
     const newItem = [...todos];
     const todoIndex = newItem.findIndex((todo) => todo.text === text);
     newItem[todoIndex].completed = true;
@@ -41,7 +63,6 @@ function App() {
   }
 
   const deleteStandaloneTodo = (text) => {
-    console.log('delete');
     const newItem = [...todos];
     const todoIndex = newItem.findIndex((todo) => todo.text === text);
     newItem.splice(todoIndex,1);
@@ -50,6 +71,8 @@ function App() {
 
   return (
     <AppUI 
+      loacint={loading}
+      error={error}
       completedTodos={completedTodos}
       totalTodos={totalTodos}
       searchValue={searchValue}
