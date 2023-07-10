@@ -1,14 +1,14 @@
 import "./CreateTodoButton.css";
 
-function CreateTodoButton () {
+function CreateTodoButton ({ setOpenModal }) {
     return (
-        <button className="createTodoButton" onClick={(event)=>{
-            console.log('click');
-            console.log(event);
-            console.log(event.target);
-        }}><span className="material-symbols-outlined">
-        add
-        </span></button>
+        <button 
+            className="createTodoButton" 
+            onClick={()=>{
+                setOpenModal(state => !state); 
+            }}
+            ><span className="material-symbols-outlined">add</span>
+        </button>
     );
 }
 
