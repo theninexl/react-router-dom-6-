@@ -41,8 +41,39 @@ function App() {
         searchValue = {searchValue} 
         setSearchValue = {setSearchValue}/>
     </TodoHeader>
+
+    <TodoList
+      error={error}
+      loading={loading}
+      searchedTodos={searchedTodos}
+      totalTodos={totalTodos}
+      searchText={searchValue}
+      onError={()=> <TodosError />}
+      onLoading={()=> <TodosLoading />}
+      onEmptyTodos={()=> <TodosEmpty/>}
+      onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p>}
+      // render={ todo => 
+      //   <TodoItem 
+      //   key={todo.text} 
+      //   text={todo.text} 
+      //   completed={todo.completed}
+      //   onComplete={() => completeStandaloneTodo(todo.text)}
+      //   onDelete={() => deleteStandaloneTodo(todo.text)}
+      //   />
+      // }
+      >
+        {todo => 
+          <TodoItem 
+          key={todo.text} 
+          text={todo.text} 
+          completed={todo.completed}
+          onComplete={() => completeStandaloneTodo(todo.text)}
+          onDelete={() => deleteStandaloneTodo(todo.text)}
+          />
+        }
+      </TodoList>
     
-    <TodoList>
+    {/* <TodoList>
       {(loading && searchedTodos.length === 0) && 
         <>
         <TodosLoading />
@@ -62,7 +93,7 @@ function App() {
         onDelete={() => deleteStandaloneTodo(todo.text)}
         />
       ))}
-    </TodoList>
+    </TodoList> */}
 
 
     <CreateTodoButton

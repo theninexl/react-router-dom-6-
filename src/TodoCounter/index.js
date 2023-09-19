@@ -12,7 +12,7 @@ function TodoCounter({ completedTodos, totalTodos }) {
   if (completedTodos === totalTodos){
     taskMsg = 'No tienes tareas pendientes';
   } else {
-    taskMsg = `Tienes ${completedTodos} de ${totalTodos} tareas pendientes`;
+    taskMsg = `Tienes ${completedTodos} de ${totalTodos} tareas completadas`;
   }
 
   return (
