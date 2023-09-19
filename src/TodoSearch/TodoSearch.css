@@ -11,3 +11,7 @@
 .css-input:focus {
     outline:none;
 }
+
+.css-input:disabled {
+    opacity: 25%;
+}

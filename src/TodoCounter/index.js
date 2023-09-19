@@ -2,17 +2,20 @@ import React from "react";
 import "./TodoCounter.css";
 //import { TodoContext } from "../TodoContext";
 
-function TodoCounter({ completedTodos, totalTodos }) {
+function TodoCounter({ completedTodos, totalTodos, loading }) {
   // const {
   //   completedTodos, 
   //   totalTodos
   // } = React.useContext(TodoContext)
 
   let taskMsg = '';
-  if (completedTodos === totalTodos){
+  
+  if (completedTodos === totalTodos && !loading ){
     taskMsg = 'No tienes tareas pendientes';
+  } else if (loading) {
+    taskMsg = "Loading..."
   } else {
-    taskMsg = `Tienes ${completedTodos} de ${totalTodos} tareas completadas`;
+    taskMsg = `${completedTodos} completed tasks, out of ${totalTodos}`;
   }
 
   return (

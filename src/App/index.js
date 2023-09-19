@@ -33,13 +33,18 @@ function App() {
 
   return (
     <>
-    <TodoHeader>
+    {/* Como TodoCounter y TodoSearch reciben la misma prop, la pasamos al componente padre TodoHeader y dentro de el hacemos las operaciones necesarias para pasarle esa única prop a sus hijos, sin tener que pasarsela dos veces */}
+    <TodoHeader loading={loading}>
       <TodoCounter
         totalTodos = {totalTodos}
-        completedTodos = {completedTodos} />
+        completedTodos = {completedTodos}
+        // loading={loading}
+        />
       <TodoSearch 
         searchValue = {searchValue} 
-        setSearchValue = {setSearchValue}/>
+        setSearchValue = {setSearchValue}
+        // loading={loading}
+        />
     </TodoHeader>
 
     <TodoList
