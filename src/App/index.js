@@ -12,7 +12,7 @@ import { TodosError } from '../TodosError';
 import { TodosEmpty } from '../TodosEmpty';
 import { Modal } from '../Modal';
 import { TodoForm } from '../TodoForm';
-import { ChangeAlertWithStorageListener } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 
 function App() { 
@@ -115,7 +115,7 @@ function App() {
           setOpenModal = {setOpenModal}/>
       </Modal>
     )}
-    <ChangeAlertWithStorageListener
+    <ChangeAlert
       sincronize={sincronizeTodos}
     />
     </>  
