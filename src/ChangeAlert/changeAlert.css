@@ -1,0 +1,47 @@
+.changeAlert-container {
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.changeAlert-background {
+  background-color: #000000;
+  height: 100%;
+  opacity: 0.35;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+
+.changeAlert-content {
+  background: var(--color-lavender-blush);
+  box-sizing: border-box;
+  border-radius: var(--radius-400);
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: var(--text-size-100);
+  text-align: center;
+  color: var(--color-text);
+  left:10%;
+  margin: 0;
+  padding: 24px;
+  position: absolute;
+  top:40%;
+  z-index:1;
+  width: 80%;
+}
+
+.changeAlert-content .title {
+  color:var(--color-mountbatten-pink);
+}
+
+.changeAlert-content button {
+  background-color: var(--color-mountbatten-pink);
+  border: 0;
+  border-radius: var(--radius-200);
+  color:var(--color-text);
+  font-size: var(--component-comfortable-medium-text-size);
+  padding: var(--text-size-100);
+}
