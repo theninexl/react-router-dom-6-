@@ -34,11 +34,23 @@ function useTodos() {
         })
         saveTodos(newTodos);
     }
+
+    const getTodo = (id) => {
+        const todoIndex = todos.findIndex((todo) => todo.id === id);
+        return todos[todoIndex];
+    }
     
     const completeStandaloneTodo = (id) => {
         const newItem = [...todos];
         const todoIndex = newItem.findIndex((todo) => todo.id === id);
         newItem[todoIndex].completed = true;
+        saveTodos(newItem);  
+    }
+
+    const editStandaloneTodo = (id, newText) => {
+        const newItem = [...todos];
+        const todoIndex = newItem.findIndex((todo) => todo.id === id);
+        newItem[todoIndex].text= newText;
         saveTodos(newItem);  
     }
     
@@ -68,10 +80,10 @@ function useTodos() {
             setSearchValue,
             searchedTodos,
             completeStandaloneTodo,
+            editStandaloneTodo,
             deleteStandaloneTodo,
-            openModal,
-            setOpenModal,
             addTodo,
+            getTodo,
             sincronizeTodos,
         };
 }

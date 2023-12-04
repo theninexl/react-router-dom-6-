@@ -67,7 +67,14 @@ function Homepage() {
           text={todo.text} 
           completed={todo.completed}
           onComplete={() => completeStandaloneTodo(todo.id)}
-          onEdit={() => navigate('/edit/'+todo.id)}
+          onEdit={() => {
+            navigate(
+              '/edit/'+todo.id,
+              {
+                state: { todo}
+              }
+            )
+          }}
           onDelete={() => deleteStandaloneTodo(todo.id)}
           />
         }
