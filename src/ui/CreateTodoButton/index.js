@@ -1,12 +1,10 @@
 import "./CreateTodoButton.css";
 
-function CreateTodoButton ({ setOpenModal }) {
+function CreateTodoButton (props) {
     return (
         <button 
             className="createTodoButton" 
-            onClick={()=>{
-                setOpenModal(state => !state); 
-            }}
+            onClick={props.onClick}
             ><span className="material-symbols-outlined">add</span>
         </button>
     );
