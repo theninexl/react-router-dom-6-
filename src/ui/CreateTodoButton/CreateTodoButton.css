@@ -1,0 +1,27 @@
+.createTodoButton {
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.05);
+    bottom: 32px;
+    right: 32px;
+    width: 72px;
+    height: 72px;
+    padding: var(--spacing-80);
+    font-size: var(--text-size-200);
+    background-color: var(--color-mountbatten-pink);
+    border: 0;
+    color:var(--color-rose-quartz);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.createTodoButton span {
+    font-size: 48px;
+    margin: 0;
+    color: white;
+}
+

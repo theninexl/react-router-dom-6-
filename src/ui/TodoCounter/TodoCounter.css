@@ -1,0 +1,9 @@
+.todoCounter h1 {
+    color: var(--color-mountbatten-pink);
+    margin-bottom: 0;
+}
+
+.todoCounter h4 {
+   font-size: var(--text-size-100);
+   margin-top: 0;;
+}

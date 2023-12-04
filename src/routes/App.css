@@ -1,0 +1,92 @@
+body {
+  --color-text: #1C1D21;
+  --color-mountbatten-pink: #A288A6;
+  --color-rose-quartz: #BB9BB0;
+  --color-silver:#CCBCBC;
+  --color-lavender-blush:#F1E3E4;
+
+  --text-size-100: 18px;
+  --text-size-200: 22px;
+  --text-size-300: 26px;
+  --text-size-400: 31px;
+  --text-size-500: 37px;
+  --icon-size-100: 18px;
+  --icon-size-200: 22px;
+  --icon-size-300: 26px;
+  --icon-size-400: 31px;
+  --icon-size-500: 37px;
+  --spacing-90: 12px;
+  --spacing-80: 8px;
+  --spacing-100: 18px;
+  --spacing-200: 27px;
+  --spacing-300: 41px;
+  --spacing-400: 61px;
+  --spacing-500: 91px;
+  --spacing-600: 137px;
+  --radius-100: 2px;
+  --radius-200: 4px;
+  --radius-300: 6px;
+  --radius-400: 8px;
+  --elevation-100-offsetY: 4px;
+  --elevation-100-blur: 4px;
+  --elevation-200-offsetY: 8px;
+  --elevation-200-blur: 8px;
+  --elevation-300-offsetY: 16px;
+  --elevation-300-blur: 16px;
+  --text-icon-gap-100: 3px;
+  --text-icon-gap-200: 3px;
+  --text-icon-gap-300: 4px;
+  --text-icon-gap-400: 5px;
+  --text-icon-gap-500: 6px;
+  --component-comfortable-medium-gap: 3px;
+  --component-comfortable-medium-padding-left: var(--text-size-100);
+  --component-comfortable-medium-padding-right: var(--text-size-100);
+  --component-comfortable-medium-top: var(--text-size-100);
+  --component-comfortable-medium-bottom: var(--text-size-100);
+  --component-comfortable-medium-text-size: var(--text-size-100);
+  --component-comfortable-medium-icon-size: var(--iconography.icon-size-100);
+  --component-comfortable-medium-min-height: 27px;
+  --component-comfortable-medium-radius: 4px;
+
+  background: rgb(231,230,255);
+  background: linear-gradient(202deg, rgba(231,230,255,1) 0%, rgba(211,248,255,1) 100%);
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-size: var(--text-size-100);
+  text-align: center;
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+.simbols {
+  font-family: 'Material Symbols Outlined';
+}
+
+h1 {
+  font-size: var(--text-size-500);
+}
+h2 {
+  font-size: var(--text-size-400);
+}
+h3 {
+  font-size: var(--text-size-300);
+}
+h4 {
+  font-size: var(--text-size-200);
+}
+
+#root {
+  border: 1px solid white;
+  border-radius: var(--radius-400);
+  margin: var(--spacing-100);
+  min-height: 95vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
