@@ -66,6 +66,7 @@ function Homepage() {
           text={todo.text} 
           completed={todo.completed}
           onComplete={() => completeStandaloneTodo(todo.text)}
+          // onEdit={() => completeStandaloneTodo(todo.text)}
           onDelete={() => deleteStandaloneTodo(todo.text)}
           />
         }

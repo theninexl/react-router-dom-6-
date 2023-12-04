@@ -60,7 +60,8 @@
     color:white;
 }
 
-.todoItem-icon-button.todoItem-icon-button--delete {
+.todoItem-icon-button.todoItem-icon-button--delete,
+.todoItem-icon-button.todoItem-icon-button--edit {
     background-color: var(--color-mountbatten-pink);
 }
 
@@ -69,11 +70,19 @@
     cursor: pointer;
 }
 
-.todoItem-icon-button.todoItem-icon-button--delete:hover span {
+.todoItem-icon-button.todoItem-icon-button--edit:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.todoItem-icon-button.todoItem-icon-button--delete:hover span,
+.todoItem-icon-button.todoItem-icon-button--edit:hover span {
     color:white;
 }
 
-.todoItem .todoItem-icon-button--delete span, .todoItem-icon-button--complete span {
+.todoItem .todoItem-icon-button--delete span, 
+.todoItem .todoItem-icon-button--complete span,
+.todoItem .todoItem-icon-button--edit span {
     color: white;
 }
 

@@ -11,6 +11,10 @@ function TodoItem(props) {
         ><span className="material-symbols-outlined">Done</span></button>
         <p>{props.text}</p>
         <button 
+        className="todoItem-icon-button todoItem-icon-button--edit"
+        onClick={props.onEdit}
+        ><span className="material-symbols-outlined">Edit</span></button>
+        <button 
         className="todoItem-icon-button todoItem-icon-button--delete"
         onClick={props.onDelete}
         ><span className="material-symbols-outlined">Close</span></button>
