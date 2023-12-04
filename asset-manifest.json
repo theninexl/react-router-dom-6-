@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-router-dom-6-todoMachine/static/css/main.e92aae15.css",
+    "main.js": "/react-router-dom-6-todoMachine/static/js/main.27e2dd0c.js",
+    "index.html": "/react-router-dom-6-todoMachine/index.html",
+    "main.e92aae15.css.map": "/react-router-dom-6-todoMachine/static/css/main.e92aae15.css.map",
+    "main.27e2dd0c.js.map": "/react-router-dom-6-todoMachine/static/js/main.27e2dd0c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e92aae15.css",
+    "static/js/main.27e2dd0c.js"
+  ]
+}
