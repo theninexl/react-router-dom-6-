@@ -9,7 +9,7 @@ function useTodos() {
         loading,
         error,
         sincronizeItem: sincronizeTodos,
-        } = useLocalStorage('simpleTodosList_V1',[]);
+        } = useLocalStorage('simpleTodosList_V2',[]);
     
     const [searchValue, setSearchValue] = React.useState('');
     // console.log('los usuarios buscan: '+searchValue);
@@ -25,26 +25,37 @@ function useTodos() {
     })
 
     const addTodo = (text)=> {
+        const id = newTodoId(todos);
         const newTodos = [...todos];
         newTodos.push({
             text:text,
             completed:false,
+            id,
         })
         saveTodos(newTodos);
     }
     
-    const completeStandaloneTodo = (text) => {
+    const completeStandaloneTodo = (id) => {
         const newItem = [...todos];
-        const todoIndex = newItem.findIndex((todo) => todo.text === text);
+        const todoIndex = newItem.findIndex((todo) => todo.id === id);
         newItem[todoIndex].completed = true;
         saveTodos(newItem);  
     }
     
-    const deleteStandaloneTodo = (text) => {
+    const deleteStandaloneTodo = (id) => {
         const newItem = [...todos];
-        const todoIndex = newItem.findIndex((todo) => todo.text === text);
+        const todoIndex = newItem.findIndex((todo) => todo.id === id);
         newItem.splice(todoIndex,1);
         saveTodos(newItem); 
+    }
+
+    const newTodoId = (todoList) => {
+        if (!todoList.length) {
+            return 1;
+        }
+        const idList = todoList.map(todo => todo.id);
+        const idMax = Math.max(...idList);
+        return idMax + 1;
     }
 
 

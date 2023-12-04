@@ -62,12 +62,12 @@ function Homepage() {
       >
         {todo => 
           <TodoItem 
-          key={todo.text} 
+          key={todo.id} 
           text={todo.text} 
           completed={todo.completed}
-          onComplete={() => completeStandaloneTodo(todo.text)}
-          // onEdit={() => completeStandaloneTodo(todo.text)}
-          onDelete={() => deleteStandaloneTodo(todo.text)}
+          onComplete={() => completeStandaloneTodo(todo.id)}
+          onEdit={() => console.log('editar todo')}
+          onDelete={() => deleteStandaloneTodo(todo.id)}
           />
         }
       </TodoList>
